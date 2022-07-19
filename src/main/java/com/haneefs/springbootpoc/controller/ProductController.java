@@ -32,7 +32,7 @@ public class ProductController {
     public ResponseEntity getProduct(@PathVariable("productId") String productId){
         logger.info(requestHandler.getRequestId(),"METHOD_START","Controller Method Started");
         Product product = null;
-             product = productService.getProductById(Integer.parseInt(productId));
+             product = productService.getProductById(Long.parseLong(productId));
         return ResponseEntity.ok(product);
     }
 
