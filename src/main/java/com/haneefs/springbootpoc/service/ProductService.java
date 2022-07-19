@@ -34,7 +34,7 @@ public class ProductService {
         return createdProduct!=null?objectMapper.convertValue(createdProduct,Product.class):null;
     }
 
-    public Product getProductById(int id)  {
+    public Product getProductById(long id)  {
         Optional<ProductDao> productDaoOpt = productRepository.findById(id);
 
         if(productDaoOpt.isEmpty()){

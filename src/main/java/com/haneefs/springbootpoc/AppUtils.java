@@ -9,6 +9,4 @@ public class AppUtils {
     public static String getJsonString(final Object obj) throws JsonProcessingException {
         return new ObjectMapper().writeValueAsString(obj);
     }
-
-
 }
